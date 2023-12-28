@@ -3,6 +3,7 @@ const app = express();
 
 // Routes import
 import diagnosesRouter from "./routes/diagnoses";
+import patientsRouter from "./routes/patients";
 
 // Config
 const PORT = 3000;
@@ -17,13 +18,15 @@ app.use((_req, res, next) => {
   next();
 });
 
-// Enpoints
+// Test endpoint
 app.get("/ping", (_req, res) => {
   console.log('someone pinged here');
   res.send('pong');
 });
 
+// Endpoints
 app.use("/api/diagnoses", diagnosesRouter);
+app.use("/api/patients", patientsRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
