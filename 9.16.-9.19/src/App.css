@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sub-title {
+  margin-bottom: 40px;
+}
+
+.card {
+  list-style: none;
+  margin-bottom: 40px;
+  background-color: rgba(245, 245, 245, .2);
+  border-radius: 20px;
+  padding: 1px 0;
+}
+
+.new-entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error {
+  color: brown;
+}
